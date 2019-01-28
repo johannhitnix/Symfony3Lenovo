@@ -1,0 +1,20 @@
+mysql> insert into categories(name, description) values
+    -> ("Desarrollo web", "Categoria de desarrollo web"),
+    -> ("Desarrollo Android", "Categoria de desarrollo android");
+
+mysql> insert into tags(name, description) values
+    -> ("php", "php tag"),
+    -> ("symfony", "symfony tag"),
+    -> ("html", "html tag"),
+    -> ("zend", "zend tag");
+
+mysql> insert into users(role,name,surname,email,password) values
+    -> ("admin", "camilo", "colmenares", "camilo@cool.com", "1234"),
+    -> ("user", "victor", "enseñaphp", "victor@php.com", "44668");
+
+mysql> insert into entries(user_id, category_id, title, content, status) values
+    -> (1,1,"entrada de desarrollo con php","entrada de desarrollo con php entrada de desarrollo con php", "public"),
+    -> (2,2,"entrada de android","entrada de android bla bla bla", "public");
+
+mysql> insert into entry_tag(entry_id, tag_id) values
+    -> (1,2), (1,1), (2,1), (2,3);
